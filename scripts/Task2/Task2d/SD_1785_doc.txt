@@ -1,0 +1,8 @@
+we hovered the world in circumcircular direction to find out the approximate position of boxes
+whenever we say one, the drone hovered to reach at its center, and caputured a screenshot of that moment.
+After the completion of traversing, we applied SIFT feature matching technique to get top 40 matching features
+For each feature we used their coordinate and the geolocation of the corresponding matched feature to georefernce the image.
+We first changed the CRS of task2d.tif to EPSG:4326 and then using pixel2coord to change our image coordinates, then used GDAL to the tif file. It was again changed to EPSG:4326 CRS format.
+We then took the center coordinate of the refernced image to Publish to geolocation RosTopic and also to a cse file
+In QGIS, when we tried to subscribe to the rostopic for coordinates, it hanged, so we used csv file to get its coordinate
+Those coordinates from csv file were then Plotted.
