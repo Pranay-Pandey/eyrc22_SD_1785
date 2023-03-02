@@ -1,0 +1,12 @@
+<launch>
+
+  <include file="$(find sentinel_drone)/launch/whycon.launch" />
+  <include file="$(find sentinel_drone)/launch/usb_cam-test.launch" />
+  <include file="$(find plotjuggler_ros)/launch/plotjuggler.launch" />
+
+  <node name="pid_tune" pkg="pid_tune" type="pid_tune_drone.py" />
+  <node ns = "whycon_display" name="image_view" type="image_view" pkg="image_view" output="screen">
+    <remap from="image" to="/whycon/image_out"/>
+  </node>
+</launch>
+
