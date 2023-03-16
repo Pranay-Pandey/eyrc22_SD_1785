@@ -1,0 +1,9 @@
+We make the drone traverse the entire arena in linear zigzag fashion to locate the yellow boxes.
+We have designed and tuned for the coefficients of the PID controller to minimize the overshoot and aptly keep it less than 5% which is clear in the video. 
+Whenever we say one, the drone hovered to reach at its center, and captures a screenshot after some time of hovering above the box, that is taken care by making a global variable which increases to some threshold value to guarantee that the masking of the color of the box has occured some particular number of times from the camera image of the drone so that a clear and entire image of the box can be ensured.
+After the completion of capturing, we locally save the image and we applied SIFT feature matching technique to get top 40 matching features.
+For each feature we used their coordinate and the geolocation of the corresponding matched feature to georefernce the image.
+We first changed the CRS of task2d.tif to EPSG:4326 and then using pixel2coord to change our image coordinates, then used GDAL to the tif file. It was again changed to EPSG:4326 CRS format.
+We then took the center coordinate of the referenced image to publish to /geolocation rostopic and also to a csv file.
+In QGIS, when we tried to subscribe to the rostopic for coordinates, it hanged, so we used csv file to get its coordinate using the script to mark the points of the coordinate.
+Those coordinates from csv file were then Plotted.
