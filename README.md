@@ -1,3 +1,4 @@
+
 # e-Yantra Sentinel Drone
 
 e-Yantra Robotics Competition (eYRC) is a unique annual competition launched in the month of August every year for undergraduate students in science and engineering colleges, polytechnic. Selected teams are given a robotic kit complete with accessories and video tutorials to help them learn basic concepts in embedded systems and microcontroller programming. Abstracts of real world problems assigned as "themes" are then implemented by the teams using the robotic kits.
@@ -24,3 +25,28 @@ This competition conducted as a series of tasks, and our final problem statement
 The aim of this task is to get you started with installation of required software components like ROS Noetic and Gazebo.
 
 ![Screenshot1](https://europe1.discourse-cdn.com/business20/uploads/e_yantra/original/2X/e/ec857d0ff5be50e0fefe6439430b0e18bbb846fe.png)
+
+## Task 1
+
+The aim of this task is to build a PID control system to stabilise the quadcopter at any given position in a simulation environment in Gazebo and generating a georeferenced image using Georeferencer tool in QGIS.
+
+![Screenshot Theme](https://europe1.discourse-cdn.com/business20/uploads/e_yantra/original/2X/4/48e3bfcb9dadfd7d9f34d5ff7d79df938a354ac1.jpeg)
+
+
+## Task 2
+
+This task was divided into 4 parts:
+
+- Writing a wrapper over the existing PID control system, written in Task 1 to fly the quadcopter through a list of set points in the simulation environment in Gazebo.
+- Detecting object from the given image and find its pixel co-ordinates.
+- Scaning the entire city area(arena) using drone, detect object from the drone camera.
+- Now to geolocate (latitude and longitude) those suspicious object on the map.
+
+![Screenshot Theme](https://europe1.discourse-cdn.com/business20/uploads/e_yantra/original/2X/4/48e3bfcb9dadfd7d9f34d5ff7d79df938a354ac1.jpeg)
+
+## Task 3
+## Task 4
+## Task 5
+## Task 6
+## Badges
+
